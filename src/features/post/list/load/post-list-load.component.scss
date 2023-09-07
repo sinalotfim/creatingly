@@ -1,0 +1,12 @@
+.post-list-load {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    color: gray;
+    font-size: 2rem;
+    animation: spin 1s linear infinite;
+  }
+}

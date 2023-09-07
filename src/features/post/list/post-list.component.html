@@ -1,0 +1,4 @@
+<div class="post-list">
+	<post-list-item *ngFor="let item of items" [item]="item" />
+	<post-list-load *ngIf="showLoader" (loadMore)="handleLoadMore()" />
+</div>

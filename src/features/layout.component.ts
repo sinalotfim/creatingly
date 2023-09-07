@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
 	selector: 'layout',
 	templateUrl: './layout.component.html',
-	styleUrls: ['./layout.component.scss']
+	styleUrls: ['./layout.component.scss'],
+	encapsulation: ViewEncapsulation.Emulated
 })
-export class LayoutComponent {
-	title = 'creatingly';
-}
+export class LayoutComponent {}

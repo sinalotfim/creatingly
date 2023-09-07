@@ -9,6 +9,7 @@
 		"test": "jest --verbose",
 		"test:watch": "jest --watch",
 		"test:ci": "jest --runInBand",
+		"test:coverage": "jest --coverage",
 		"lint": "ng lint --fix --quiet",
 		"pretty": "prettier --write .",
 		"pretty:check": "prettier --config .prettierrc --write \"**/src/**/*.{ts,html}\"",

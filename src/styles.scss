@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+
+	layout {
+		display: block;
+		height: 100%;
+
+		post-list {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			post-list-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin: 1rem auto;
+
+				.post-list-item {
+					width: 100%;
+					aspect-ratio: 1/1;
+
+					.post-image {
+						width: 100%;
+						height: fit-content;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+// sm < 576
+// md < 744
+// lg < 1024
+// xl < 1140
+
+@media (max-width: 480px) {
+	post-list-item {
+		width: 100%;
+		max-width: 500px;
+		min-height: fit-content;
+
+		.post-list-item {
+			.profile-image {
+				width: 34px;
+				height: 34px;
+			}
+		}
+	}
+}
+
+@media (min-width: 480px) {
+	post-list-item {
+		width: 100%;
+		max-width: 500px;
+		max-height: 500px;
+		aspect-ratio: 1 / 1;
+
+		.post-list-item {
+			.profile-image {
+				width: 42px;
+				height: 42px;
+			}
+
+			.post-image {
+				border-radius: 10px;
+			}
+		}
+	}
+}
+
+@media (min-width: 744px) {
+}
+
+@media (min-width: 1024px) {
+}

@@ -11,7 +11,8 @@
 		"pretty": "prettier --write .",
 		"pretty:check": "prettier --config .prettierrc --write \"**/src/**/*.{ts,html}\"",
 		"husky:prepare": "husky install",
-		"husky:lint-staged": "husky add .husky/pre-commit \"npm lint-staged\""
+		"husky:pre-commit": "husky add .husky/pre-commit \"npx lint-staged\"",
+		"husky:commit": "husky add .husky/commit-msg \"npx --no -- commitlint --edit ${1}\""
 	},
 	"private": true,
 	"dependencies": {
@@ -36,6 +37,8 @@
 		"@angular-eslint/template-parser": "16.1.2",
 		"@angular/cli": "~16.0.1",
 		"@angular/compiler-cli": "^16.0.0",
+		"@commitlint/cli": "^17.7.1",
+		"@commitlint/config-angular": "^17.7.0",
 		"@types/jasmine": "~4.3.0",
 		"@typescript-eslint/eslint-plugin": "5.62.0",
 		"@typescript-eslint/parser": "5.62.0",

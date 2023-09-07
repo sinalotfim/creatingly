@@ -9,7 +9,9 @@
 		"test": "ng test",
 		"lint": "ng lint --fix",
 		"pretty": "prettier --write .",
-		"pretty:check": "prettier --config .prettierrc --write \"**/src/**/*.{ts,html}\""
+		"pretty:check": "prettier --config .prettierrc --write \"**/src/**/*.{ts,html}\"",
+		"husky:prepare": "husky install",
+		"husky:lint-staged": "husky add .husky/pre-commit \"npm lint-staged\""
 	},
 	"private": true,
 	"dependencies": {

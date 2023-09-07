@@ -48,13 +48,20 @@
 		"karma-coverage": "~2.2.0",
 		"karma-jasmine": "~5.1.0",
 		"karma-jasmine-html-reporter": "~2.0.0",
+		"lint-staged": "^14.0.1",
 		"prettier": "^3.0.3",
 		"prettier-eslint": "^15.0.1",
 		"typescript": "~5.0.2"
 	},
+	"lint-staged": {
+		"*.{ts,js,html}": [
+			"prettier --write",
+			"eslint --quiet --fix"
+		]
+	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run pretty:check"
+			"pre-commit": "lint-staged"
 		}
 	}
 }
